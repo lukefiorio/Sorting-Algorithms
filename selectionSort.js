@@ -1,1 +1,15 @@
-const randArr = [4, 2, 6, 8, 1, 0, 5, 9, 7, 3];
+function selectionSort(arr) {
+  let minIndex;
+  for (let j = 0; j < arr.length - 1; j++) {
+    let minVal = arr[j];
+    for (let i = j; i < arr.length; i++) {
+      if (arr[i] <= minVal) {
+        minVal = arr[i];
+        minIndex = i;
+      }
+    }
+    const temp = arr[j];
+    arr[j] = arr[minIndex];
+    arr[minIndex] = temp;
+  }
+}
