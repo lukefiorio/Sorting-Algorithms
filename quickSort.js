@@ -1,3 +1,4 @@
+// quick sort algorithm
 function quickSort(arr, startIndex, endIndex) {
   if (startIndex >= endIndex) {
     return arr;

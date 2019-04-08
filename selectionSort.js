@@ -1,3 +1,4 @@
+// selection sort algorithm
 function selectionSort(arr) {
   let minIndex;
   for (let j = 0; j < arr.length - 1; j++) {

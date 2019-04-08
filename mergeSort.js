@@ -1,3 +1,4 @@
+// merge sort algorithm
 function mergeSort(arr) {
   if (arr.length <= 1) {
     return arr;
