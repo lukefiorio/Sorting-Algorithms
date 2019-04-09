@@ -3,6 +3,7 @@ function mergeSort(arr) {
   if (arr.length <= 1) {
     return arr;
   }
+
   let midpoint = Math.floor(arr.length / 2);
   let left = arr.splice(0, midpoint);
   // arr is now the right side of array (after splice)
@@ -18,14 +19,10 @@ function mergeSort(arr) {
       (leftArrays[0] === undefined && rightArrays[0] !== undefined)
     ) {
       sortedArray.push(rightArrays[0]);
-      rightArrays.splice(0, 1);
-    }
-    if (
-      leftArrays[0] <= rightArrays[0] ||
-      (rightArrays[0] === undefined && leftArrays[0] !== undefined)
-    ) {
+      rightArrays.shift();
+    } else {
       sortedArray.push(leftArrays[0]);
-      leftArrays.splice(0, 1);
+      leftArrays.shift();
     }
   }
 
